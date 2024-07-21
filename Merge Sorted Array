@@ -3,6 +3,7 @@ Output: [1,2,2,3,5,6]
 Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
 The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
 
+***PYTHON***
 
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
@@ -10,4 +11,16 @@ class Solution(object):
             nums1[m+j]=nums2[j]
         nums1.sort()
         return nums1
+
+***JAVA***
+
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for(int j=0,i=m;j<n;j++){
+            nums1[i]=nums2[j];
+            i++;
+        }
+        Arrays.sort(nums1);      
+    }
+}
         
