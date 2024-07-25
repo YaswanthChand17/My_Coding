@@ -1,0 +1,16 @@
+def dec_to_bin(n):
+    if n==0:
+        return "0"
+    binary=""
+    while n>0:
+        binary=str(n%2)+binary
+        n=n//2
+    return binary
+dec= int(input())
+binary= dec_to_bin(dec)
+print(binary)
+
+***OR***
+
+dec=int(input())
+print(bin(dec)[2:])
